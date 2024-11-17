@@ -1,0 +1,88 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#009688">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#E91E63">
+
+        <!-- Left Image/Icon -->
+        <ImageView
+            android:id="@+id/left_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Icon"
+            android:scaleType="centerCrop" />
+
+        <!-- Main content -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Title and subtitle -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Subtitle"
+                android:textSize="14sp"
+                android:textColor="#D7D5D5" />
+        </LinearLayout>
+
+        <!-- Right Arrow -->
+        <ImageView
+            android:id="@+id/right_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+            android:src="@drawable/ic_arrow_down"
+            android:contentDescription="Arrow" />
+    </LinearLayout>
+
+    <!-- Expandable content -->
+    <LinearLayout
+        android:id="@+id/expandable_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is an expandable description." />
+
+        <Button
+            android:id="@+id/action_button"
+            android:backgroundTint="#FF5722"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Action"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+</LinearLayout>
